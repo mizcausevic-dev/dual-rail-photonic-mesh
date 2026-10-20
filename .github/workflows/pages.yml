@@ -1,8 +1,8 @@
 name: Deploy GitHub Pages
 
+# Live preview is the gh-pages branch, not this workflow.
+# Left as a manual rebuild so a push does not switch Pages over to Actions.
 on:
-  push:
-    branches: [main, master, cursor/dual-rail-photonic-mesh-aa54]
   workflow_dispatch:
 
 permissions:

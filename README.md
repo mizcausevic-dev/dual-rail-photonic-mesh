@@ -28,7 +28,7 @@ Selected programmable mesh presets. This page does not decompose an arbitrary ta
 
 ## GitHub Pages
 
-`vite` builds with `base: "./"`. The workflow in `.github/workflows/pages.yml` publishes `dist` with GitHub Actions. Enable Pages from GitHub Actions on the repository. Build success, deployment success, and a public URL are separate facts. Do not treat a local build as a live preview.
+`vite` builds with `base: "./"`. The live preview is the `gh-pages` branch: the contents of `dist` plus a `.nojekyll` file, served from the repository root. `.github/workflows/pages.yml` is manual only, so a source push does not switch Pages over to GitHub Actions. A local build is not the same fact as a public URL.
 
 ## About
 
