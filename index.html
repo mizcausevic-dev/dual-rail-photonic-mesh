@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dual-rail photonic mesh, ideal model</title>
+    <meta
+      name="description"
+      content="A 34-second ideal-model explainer of four dual-rail qubits on a programmable eight-mode photonic mesh, with multiphoton interference and destructive readout."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230B1018' width='32' height='32'/%3E%3Cpath stroke='%2300E5FF' d='M4 10h24'/%3E%3Cpath stroke='%239D4EDD' d='M4 16h24'/%3E%3Cpath stroke='%23FFD166' d='M14 8v10'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-BPKJJcmP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DRv8taeN.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage">
+        <canvas id="view" aria-label="3D schematic of the photonic mesh"></canvas>
+        <div id="tags"></div>
+        <div id="fallback" hidden></div>
+        <header id="mast">
+          <p class="kicker">Four dual-rail inputs · eight modes · 34.000 s</p>
+          <h1>Dual-rail photonic mesh</h1>
+          <p id="evidence">Scientific schematic with ideal linear-optical evolution and synthetic detection.</p>
+        </header>
+        <div id="loading">Computing the ideal multiphoton model…</div>
+        <div id="error" hidden></div>
+      </div>
+      <section id="readout" aria-label="Calculated readouts"></section>
+      <footer id="transport">
+        <div class="transport-row">
+          <button id="play" type="button" aria-pressed="false">Play</button>
+          <button id="replay" type="button">Replay</button>
+          <button id="mute" type="button" aria-pressed="false">Mute</button>
+          <button id="scheme" type="button" aria-pressed="false">Schematic</button>
+          <button id="full" type="button">Fullscreen</button>
+          <label class="check"><input id="reduce" type="checkbox" /> Reduced motion</label>
+        </div>
+        <div class="transport-row levels">
+          <label>Music <input id="music" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Music level" /></label>
+          <label>Effects <input id="sfx" type="range" min="0" max="1" step="0.01" value="0.75" aria-label="Effects level" /></label>
+        </div>
+        <div class="ticks" aria-hidden="true">
+          <span style="left: 0%">0</span>
+          <span style="left: 14.7%">5</span>
+          <span style="left: 29.4%">10</span>
+          <span style="left: 50%">17</span>
+          <span style="left: 73.5%">25</span>
+          <span style="left: 100%">34</span>
+        </div>
+        <div class="scrub-row">
+          <input id="scrub" type="range" min="0" max="34" step="0.001" value="0" aria-label="Timeline, 0 to 34 seconds" aria-valuemin="0" aria-valuemax="34" aria-valuenow="0" />
+          <span id="timecode">0.000 / 34.000 s · frame 0</span>
+        </div>
+        <p id="keys" class="keys">Space play or pause. Arrows seek 1 second. Shift plus arrows seek 0.1 second. M mute. F fullscreen. R replay. Home and End jump.</p>
+        <p id="audio-note"></p>
+      </footer>
+    </div>
+    <div id="live" class="sr-only" aria-live="polite"></div>
+    <noscript>This explainer needs JavaScript to compute the ideal multiphoton model and draw the mesh.</noscript>
+  </body>
+</html>
